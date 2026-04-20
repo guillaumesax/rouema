@@ -187,21 +187,35 @@ const ScalesPage: React.FC<ScalesPageProps> = ({ item, onBack }) => {
            </div>
         </div>
       ) : (
-        /* LARGE SCALE GRID */
         <div className="flex-grow grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8">
-        {item.recommendedScales.map((scale, idx) => {
+          {/* LARGE SCALE GRID */}
+          {item.recommendedScales.map((scale, idx) => {
           const concertRoot = transposeNote(scale.root, 0, pref);
           const bbRoot = transposeNote(scale.root, 2, pref);
           const ebRoot = transposeNote(scale.root, 9, pref);
+          const isPentatonic = scale.type.includes('pentatonic');
 
           return (
-            <div key={idx} className="bg-slate-800/40 rounded-[3rem] border border-slate-700/50 p-8 md:p-12 shadow-2xl flex flex-col gap-8 hover:border-indigo-500/50 transition-all duration-500 relative overflow-hidden group">
+            <div key={idx} className={`bg-slate-800/40 rounded-[3rem] border p-8 md:p-12 shadow-2xl flex flex-col gap-8 transition-all duration-500 relative overflow-hidden group ${
+              isPentatonic 
+                ? 'border-indigo-500 ring-2 ring-indigo-500/20 shadow-indigo-500/10' 
+                : 'border-slate-700/50 hover:border-indigo-500/50'
+            }`}>
               {/* Background Accent */}
-              <div className="absolute -top-24 -right-24 w-64 h-64 bg-indigo-600/5 blur-[100px] rounded-full group-hover:bg-indigo-600/10 transition-colors"></div>
+              <div className={`absolute -top-24 -right-24 w-64 h-64 blur-[100px] rounded-full transition-colors ${
+                isPentatonic ? 'bg-indigo-600/20' : 'bg-indigo-600/5 group-hover:bg-indigo-600/10'
+              }`}></div>
               
               {/* Scale Title - Concert Key */}
               <div className="relative z-10 border-b border-slate-700/50 pb-6">
-                <div className="text-slate-500 text-[10px] font-black uppercase tracking-[0.3em] mb-2">Concert / Piano</div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="text-slate-500 text-[10px] font-black uppercase tracking-[0.3em]">Concert / Piano</div>
+                  {isPentatonic && (
+                    <div className="px-3 py-1 rounded-full bg-indigo-500 text-white text-[9px] font-black uppercase tracking-widest shadow-lg animate-pulse">
+                      CONSEILLÉ
+                    </div>
+                  )}
+                </div>
                 <h3 className="text-4xl md:text-5xl font-black text-white tracking-tight">
                     {formatScaleName(concertRoot, scale.type)}
                 </h3>
