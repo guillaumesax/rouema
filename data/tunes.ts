@@ -7,7 +7,7 @@ export const JAM_TRACKS: JamTrack[] = [
     artist: 'Pink Floyd',
     tags: { styles: ['Rock'], tempo: 'Medium', complexity: 'Séquence simple' },
     recommendedScales: [
-      { root: 'D', type: 'dorian', reason: 'Le riff mythique est en Ré Dorien' },
+      { root: 'D', type: 'minor', reason: 'Tonalité en Ré mineur' },
       { root: 'D', type: 'pentatonic minor', reason: 'Pour les solos blues-rock de Gilmour' }
     ]
   },
@@ -27,8 +27,8 @@ export const JAM_TRACKS: JamTrack[] = [
     artist: 'Bruce Springsteen',
     tags: { styles: ['Rock'], tempo: 'Medium', complexity: 'Séquence simple' },
     recommendedScales: [
-      { root: 'B', type: 'major', reason: 'Tonalité épique en Si majeur' },
-      { root: 'B', type: 'pentatonic major', reason: 'L\'approche sûre pour le rock US' }
+      { root: 'A', type: 'major', reason: 'Tonalité en La majeur' },
+      { root: 'A', type: 'pentatonic major', reason: 'L\'approche sûre pour le rock US' }
     ]
   },
   {
@@ -37,9 +37,8 @@ export const JAM_TRACKS: JamTrack[] = [
     artist: 'The Beatles',
     tags: { styles: ['Rock', 'Blues'], tempo: 'Medium', complexity: 'Séquence simple' },
     recommendedScales: [
-      { root: 'D', type: 'minor', reason: 'Vibe bluesy en Ré mineur' },
-      { root: 'D', type: 'pentatonic minor', reason: 'La base pour improviser sur ce riff sombre' },
-      { root: 'D', type: 'blues', reason: 'Parfait pour le riff de basse et les solos' }
+      { root: 'D', type: 'blues', reason: 'Parfait pour le riff de basse et les solos' },
+      { root: 'D', type: 'pentatonic minor', reason: 'La base pour improviser sur ce riff sombre' }
     ]
   },
   {
@@ -48,8 +47,8 @@ export const JAM_TRACKS: JamTrack[] = [
     artist: 'Jimi Hendrix',
     tags: { styles: ['Rock', 'Blues'], tempo: 'Lent', complexity: 'Séquence simple' },
     recommendedScales: [
-      { root: 'E', type: 'pentatonic minor', reason: 'La base absolue du style Hendrix' },
-      { root: 'E', type: 'blues', reason: 'Incontournable pour le style Hendrix' }
+      { root: 'E', type: 'major', reason: 'Tonalité en Mi majeur' },
+      { root: 'E', type: 'pentatonic major', reason: 'Incontournable pour le style Hendrix' }
     ]
   },
   {
@@ -68,8 +67,8 @@ export const JAM_TRACKS: JamTrack[] = [
     artist: 'Prince',
     tags: { styles: ['Pop', 'Rock'], tempo: 'Lent', complexity: 'Plusieurs sections' },
     recommendedScales: [
-      { root: 'Bb', type: 'major', reason: 'Ballade majestueuse en Sib majeur' },
-      { root: 'Bb', type: 'pentatonic major', reason: 'Pour chanter avec votre guitare' }
+      { root: 'F', type: 'major', reason: 'Ballade majestueuse en Fa majeur' },
+      { root: 'F', type: 'pentatonic major', reason: 'Pour chanter avec votre guitare' }
     ]
   },
   {
@@ -99,8 +98,8 @@ export const JAM_TRACKS: JamTrack[] = [
     artist: 'Michael Jackson',
     tags: { styles: ['Pop', 'Funk'], tempo: 'Medium', complexity: 'Plusieurs sections' },
     recommendedScales: [
-      { root: 'F#', type: 'dorian', reason: 'Basse mythique et accords en Fa# Dorien' },
-      { root: 'F#', type: 'pentatonic minor', reason: 'Efficace sur le groove disco-funk' }
+      { root: 'D', type: 'minor', reason: 'Groove en Ré mineur' },
+      { root: 'D', type: 'pentatonic minor', reason: 'Efficace sur le groove disco-funk' }
     ]
   },
   {
@@ -109,8 +108,8 @@ export const JAM_TRACKS: JamTrack[] = [
     artist: 'Eric Clapton',
     tags: { styles: ['Rock', 'Blues'], tempo: 'Medium', complexity: 'Séquence simple' },
     recommendedScales: [
-      { root: 'E', type: 'pentatonic minor', reason: 'Standard rock en Mi mineur pentatonique' },
-      { root: 'E', type: 'blues', reason: 'Pour l\'aspect bluesy de Clapton' }
+      { root: 'D', type: 'major', reason: 'Standard rock en Ré majeur' },
+      { root: 'D', type: 'pentatonic major', reason: 'Pour l\'aspect bluesy' }
     ]
   },
   {
@@ -129,8 +128,8 @@ export const JAM_TRACKS: JamTrack[] = [
     artist: 'Gloria Gaynor',
     tags: { styles: ['Pop', 'Soul'], tempo: 'Rapide', complexity: 'Séquence simple' },
     recommendedScales: [
-      { root: 'A', type: 'minor', reason: 'Cycle de quintes classique en La mineur' },
-      { root: 'A', type: 'pentatonic minor', reason: 'Idéal pour improviser sans risque sur le tempo rapide' }
+      { root: 'Bb', type: 'minor', reason: 'Tonalité en Sib mineur' },
+      { root: 'Bb', type: 'pentatonic minor', reason: 'Idéal pour improviser sans risque sur le tempo rapide' }
     ]
   },
   {
